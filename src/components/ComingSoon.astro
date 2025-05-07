@@ -1,14 +1,16 @@
-<div title="Coming Soon" class="min-h-[90svh] flex flex-col items-center justify-center relative px-4 pb-0">
+<div title="Coming Soon" class="pb-4 min-h-[70svh] flex flex-col items-center justify-center relative px-4">
     <div
-        class="absolute top-1/2 left-1/2 h-[90svh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#451a6b] blur-[90px] md:blur-[100px] opacity-100 z-0 w-full"
+        id="purpleblob"
+        class="absolute top-1/2 left-1/2 h-[100svh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#451a6b] blur-[80px] md:blur-[90px] opacity-100 z-0 w-full"
     >
     </div>
 
-    <div id="butterfly" role="img" class="absolute top-0 left-0 h-[90vh] bg-no-repeat bg-cover md:bg-contain bg-center bg-[url('/images/BgButterfly.svg')]">
+    <div id="butterfly" role="img" class="brightness-80 absolute inset-0 bg-no-repeat bg-cover md:bg-contain bg-center bg-[url('/images/BgButterfly.svg')]">
     </div>
+
     <img src="/images/MMLogo.svg" alt="Monarch Media logo" class="z-10 w-60 drop-shadow-[#e8cf7c]/80 drop-shadow-xl" />
     <h1
-        class="pb-4 font-header text-5xl md:text-7xl lg:text-8xl font-bold drop-shadow-[#e8cf7c] drop-shadow-sm z-10 bg-gradient-to-br from-amber-100 to-yellow-500 bg-clip-text text-transparent"
+        class="pb-4 text-center font-header text-5xl md:text-7xl lg:text-8xl font-bold drop-shadow-[#e8cf7c] drop-shadow-sm z-10 bg-gradient-to-br from-amber-100 to-yellow-500 bg-clip-text text-transparent"
     >
         Coming Soon
     </h1>
@@ -78,7 +80,16 @@
 <style>
     #butterfly {
         width: 100%;
-        padding: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-position: center;
+    }
+
+    #purpleblob {
+        width: 90vh;
+        height: 90vh;
+        padding: 0 !important;
+        margin: 0 !important;
         background-position: center;
     }
 </style>
