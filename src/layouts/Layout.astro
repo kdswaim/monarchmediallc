@@ -1,9 +1,10 @@
 ---
 import '../../src/styles/globals.css';
 import '@fontsource-variable/inter/wght.css';
-import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ComingSoon from '../components/ComingSoon.astro';
+import MeetTheTeam from '../components/MeetTheTeam.astro';
 
 interface Props {
     title: string;
@@ -16,19 +17,53 @@ const { title } = Astro.props;
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>{title}</title>
+        <!-- Primary Meta Tags -->
+        <title>Monarch Media LLC | Social Media, Marketing & Web Design</title>
+        <meta name="title" content="Monarch Media LLC | Social Media, Marketing & Web Design" />
+        <meta
+            name="description"
+            content="Stand out with bold web design, branding, and marketing services with Monarch Media LLC. Serving Terre Haute and the Wabash Valley."
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://monarchmediallc.com" />
+        <meta property="og:title" content="Monarch Media LLC | Social Media, Marketing & Web Design" />
+        <meta
+            property="og:description"
+            content="Stand out with bold web design, branding, and marketing services with Monarch Media LLC. Serving Terre Haute and the Wabash Valley."
+        />
+        <meta property="og:image" content="/images/ogbanner.png" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://monarchmediallc.com" />
+        <meta property="twitter:title" content="Monarch Media LLC | Social Media, Marketing & Web Design" />
+        <meta
+            property="twitter:description"
+            content="Stand out with bold web design, branding, and marketing services with Monarch Media LLC. Serving Terre Haute and the Wabash Valley."
+        />
+        <meta property="twitter:image" content="/images/ogbanner.png" />
+        <meta
+            name="keywords"
+            content="marketing, web design, web designer, website design, website designer, social media, terre haute, marketing terre haute, web design terre haute, social media terre haute, branding, custom websites"
+        />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
+        <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     </head>
-    <body class="antialiased text-white bg-complementary">
-        <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
-            <div class="flex flex-col w-full max-w-5xl mx-auto grow">
-                <Header />
-                <main class="grow"><slot /></main>
-                <Footer />
+    <body class="antialiased text-white">
+        <div class="-mt-20 md:-mt-10 relative min-h-screen w-full bg-cover bg-center bg-blend-hard-light">
+            <ComingSoon />
+            <div class="px-4 -mt-20 md:-mt-30 relative z-10">
+                <h2 class="font-decorative pb-8 text-center text-[#e8cf7c] text-4xl">We're #SocialButterflies</h2>
+                <MeetTheTeam />
             </div>
+            <Footer />
         </div>
     </body>
+    <!-- <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12 w-full h-full bg-cover bg-center opacity-30">
+        <main class="grow"></main> 
+    </div> -->
 </html>

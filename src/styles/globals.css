@@ -1,16 +1,42 @@
 @import 'tailwindcss';
 
 @theme {
-    --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --color-primary: #f67280;
-    --color-primary-content: #101828;
-    --color-complementary: #355c7d;
-    --background-image-noise: linear-gradient(
+    --font-header: 'Lucy Rose', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-subheader: 'Tex Gyre Temes', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-body: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-decorative: 'Eyesome Script', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-primary: #451a6b;
+    --color-secondary: #d05d97;
+    --color-primary-content: white;
+    --color-header: #e8cf7c;
+    --color-complementary: #88457c;
+    /* --background-image-noise: linear-gradient(
             to bottom,
             color-mix(in oklab, var(--color-gray-950) 0%, transparent),
             color-mix(in oklab, var(--color-gray-950) 100%, transparent)
         ),
-        url('/images/noise.png');
+        url('/images/noise.png'); */
+}
+
+@font-face {
+    font-family: 'Lucy Rose';
+    src: url('/fonts/LucyRosePERSONAL-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tex Gyre Termes';
+    src: url('/fonts/texgyretermes-regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eyesome Script';
+    src: url('/fonts/Eyesome Script.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @layer base {
@@ -75,4 +101,8 @@
         --btn-px: 1.5rem;
         --btn-py: 1.125rem;
     }
+}
+
+html {
+    background: linear-gradient(to bottom, #d05d97 0%, #451a6b 100%);
 }
