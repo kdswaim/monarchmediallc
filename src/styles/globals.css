@@ -105,4 +105,11 @@
 
 html {
     background: linear-gradient(to bottom, #d05d97 0%, #451a6b 100%);
+    transition: background 0.5s ease;
+}
+
+@media (max-width: 639px) {
+    html {
+        background: linear-gradient(to bottom, #451a6b 0%, #d05d97 100%);
+    }
 }

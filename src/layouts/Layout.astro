@@ -17,6 +17,23 @@ const { title } = Astro.props;
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <!-- Faded page load-in -->
+        <style>
+            body {
+                animation: fadeInAnimation ease 3s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+            }
+            @keyframes fadeInAnimation {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
         <!-- Primary Meta Tags -->
         <title>Monarch Media LLC | Social Media, Marketing & Web Design</title>
         <meta name="title" content="Monarch Media LLC | Social Media, Marketing & Web Design" />
@@ -49,21 +66,20 @@ const { title } = Astro.props;
             content="marketing, web design, web designer, website design, website designer, social media, terre haute, marketing terre haute, web design terre haute, social media terre haute, branding, custom websites"
         />
         <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     </head>
     <body class="antialiased text-white">
-        <div class="-mt-20 md:-mt-10 relative min-h-screen w-full bg-cover bg-center bg-blend-hard-light">
+        <div class="relative pt-10 sm:pt-20 md:pt-28 min-h-[100svh] w-full bg-cover bg-center bg-blend-hard-light">
             <ComingSoon />
-            <div class="px-4 -mt-20 md:-mt-30 relative z-10">
+            <div class="px-4 relative z-10">
                 <h2 class="font-decorative pb-8 text-center text-[#e8cf7c] text-4xl">We're #SocialButterflies</h2>
                 <MeetTheTeam />
             </div>
             <Footer />
         </div>
-    </body>
-    <!-- <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12 w-full h-full bg-cover bg-center opacity-30">
+    </body><!-- <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12 w-full h-full bg-cover bg-center opacity-30">
         <main class="grow"></main> 
     </div> -->
 </html>
