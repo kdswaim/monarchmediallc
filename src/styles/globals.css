@@ -113,3 +113,9 @@ html {
         background: linear-gradient(to bottom, #451a6b 20%, #d05d97 100%);
     }
 }
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
